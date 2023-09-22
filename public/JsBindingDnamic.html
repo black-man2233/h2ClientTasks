@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>javaScript Binding Dynamic</title>
+    <script src="../dest/JSBindingDynamic.js"></script>
+</head>
+
+<body>
+    <h3>Description</h3>
+    <p>Opgaven går du på at lave en To-do list. </p>
+    <p>Når man trykker på knappen tilføjes der en ny knap med et delete knap ved siden af den</p>
+    <p>Ved tryk af delete knap, bliver elementet slettet</p>
+    <p>Ved tryk af det nye element, kan man redigere navnet på elementet i den øverste input</p>
+    <p2>Ved tryk af det nye element, kan man redigere navnet på elementet i den øverste input</p>
+
+        <li> Nogle når der ikke er flere elementer tilbage kommer der til at stå en dum slet knap 💩💩</li>
+        <li> Koden var skrevet i javaScript men blev omdannet til TySript fordi det et sejt 😎</li>
+
+        <div class="Margin">
+            <h1> <a class="nav-link scrollto" href="/public/index.html">Home</a></h1>
+            <input id="txtButtonContext" type="text" value="" onkeyup="TextboxValueChanged()" />
+            <br />
+            <br />
+            <input id="btnAddNewButton" type="button" value="Tilføj knap" onclick="AddNewButton()" />
+            <br />
+            <br />
+
+            <div class="ButtonsAdded">
+            </div>
+        </div>
+</body>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+
+    }
+
+    div {
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+</style>
+
+</html>
+
+<script type="text/javascript">
+    window.onload = SetupDOMElements();
+</script>
