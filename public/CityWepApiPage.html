@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../style/CityWeb.css" rel="stylesheet">
+    <script src="../dest/WebApi.js"></script>
+    <title>City Wep Api</title>
+</head>
+
+<body>
+    <h1>City Web Api</h1>
+
+
+    <h3>Add New City</h3>
+    <form onsubmit="addCity()">
+
+        <select id="country">
+            <option value="">Select Country</option>
+            <option value="">Tyskland</option>
+            <option value="">Danmark</option>
+            <option value="">Frankrig</option>
+        </select>
+
+
+
+        <input type="text" id="name" placeholder="City Name">
+        <input type="text" id="description" placeholder="Description">
+
+        <select multiple>
+            <option value="sda">Select Languages</option>
+            <option value="asda">Dansk</option>
+            <option value="asd">Tysk</option>
+            <option value="dasd">Fransk</option>
+        </select>
+
+        <input type="submit" value="Add">
+    </form>
+
+
+
+    <table>
+        <tr>
+            <th>Country Name</th>
+            <th>City Name</th>
+            <th>Description</th>
+            <th>Languages</th>
+
+        </tr>
+        <tbody id="table"></tbody>
+    </table>
+
+
+
+</body>
+
+</html>
