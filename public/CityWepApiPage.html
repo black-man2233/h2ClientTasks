@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../style/CityWeb.css" rel="stylesheet">
-    <script src="../dest/WebApi.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>City Wep Api</title>
 </head>
 
@@ -14,30 +14,31 @@
 
 
     <h3>Add New City</h3>
-    <form onsubmit="addCity()">
-
-        <select id="country">
-            <option value="">Select Country</option>
-            <option value="">Tyskland</option>
-            <option value="">Danmark</option>
-            <option value="">Frankrig</option>
+    <form action="javascript:void(0);" onsubmit="addItem()" method="POST">
+        <select id="add-coId">
         </select>
-
-
-
-        <input type="text" id="name" placeholder="City Name">
-        <input type="text" id="description" placeholder="Description">
-
-        <select multiple>
-            <option value="sda">Select Languages</option>
-            <option value="asda">Dansk</option>
-            <option value="asd">Tysk</option>
-            <option value="dasd">Fransk</option>
+        <input type="text" id="add-name" placeholder="City Name">
+        <input type="text" id="add-desc" placeholder="Description">
+        <select multiple id="add-Lang">
         </select>
 
         <input type="submit" value="Add">
     </form>
 
+
+    <div id="editForm">
+        <h3>Edit City</h3>
+
+        <form action="javascript:void(0);" onsubmit="updateItem()">
+            <input type="hidden" id="edit-id">
+            <select id="edit-coid"></select>
+            <input type="text" id="edit-name">
+            <input type="text" id="edit-desc">
+            <input type="text" id="edit-conId">
+            <input type="submit" value="Save">
+            <button onclick="closeInput()" aria-label="Close">Close</a>
+        </form>
+    </div>
 
 
     <table>
@@ -52,7 +53,14 @@
     </table>
 
 
-
 </body>
 
 </html>
+
+<script src="/dest/WebApi.js" asp-append-version="true"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        getData();
+        closeInput();
+    });
+</script>
