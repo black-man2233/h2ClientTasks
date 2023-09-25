@@ -11,5 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "typecript": "^0.0.1-security"
+  },
+  "dependencies": {
+    "jquery": "^3.7.1"
   }
 }
